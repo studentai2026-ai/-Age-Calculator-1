@@ -1,59 +1,21 @@
-Skip to content
--Age-Calculator-1
-Repository navigation
-Code
-Issues
-Build Age Calculator APK
-Update buildozer.spec #10
-Annotations
-1 error and 2 warnings
-build
-failed 19 minutes ago in 13m 47s
-1s
-1s
-0s
-0s
-1s
-22s
-3s
-13m 13s
-[DEBUG]:   	[INFO   ] copying kivy/tools/highlight/kivy.vim -> build/lib.linux-x86_64-cpython-314/kivy/tools/highlight
-[DEBUG]:   	[INFO   ] copying kivy/tools/highlight/kivy-mode.el -> build/lib.linux-x86_64-cpython-314/kivy/tools/highlight
-[DEBUG]:   	[INFO   ] copying kivy/tools/highlight/kivy.tmLanguage -> build/lib.linux-x86_64-cpython-314/kivy/tools/highlight
-[DEBUG]:   	[INFO   ] copying kivy/tools/highlight/kivy.json-tmlanguage -> build/lib.linux-x86_64-cpython-314/kivy/tools/highlight
-[DEBUG]:   	[INFO   ] creating build/lib.linux-x86_64-cpython-314/kivy/tools/precommit_hooks
-[DEBUG]:   	[INFO   ] copying kivy/tools/precommit_hooks/pre-commit-config.yaml -> build/lib.linux-x86_64-cpython-314/kivy/tools/precommit_hooks
-[DEBUG]:   	[INFO   ] creating build/lib.linux-x86_64-cpython-314/kivy/tools/gles_compat
-[DEBUG]:   	[INFO   ] copying kivy/tools/gles_compat/gl2.h -> build/lib.linux-x86_64-cpython-314/kivy/tools/gles_compat
-[DEBUG]:   	[INFO   ] copying kivy/tools/gles_compat/subset_gles.py -> build/lib.linux-x86_64-cpython-314/kivy/tools/gles_compat
-[DEBUG]:   	[INFO   ] creating build/lib.linux-x86_64-cpython-314/kivy/tools/image-testsuite
-[DEBUG]:   	[INFO   ] copying kivy/tools/image-testsuite/README.md -> build/lib.linux-x86_64-cpython-314/kivy/tools/image-testsuite
-[DEBUG]:   	[INFO   ] copying kivy/tools/image-testsuite/gimp28-testsuite.py -> build/lib.linux-x86_64-cpython-314/kivy/tools/image-testsuite
-[DEBUG]:   	[INFO   ] copying kivy/tools/image-testsuite/imagemagick-testsuite.sh -> build/lib.linux-x86_64-cpython-314/kivy/tools/image-testsuite
-[DEBUG]:   	[INFO   ] creating build/lib.linux-x86_64-cpython-314/kivy/tools/theming
-[DEBUG]:   	[INFO   ] creating build/lib.linux-x86_64-cpython-314/kivy/tools/theming/defaulttheme
-[DEBUG]:   	[INFO   ] copying kivy/tools/theming/defaulttheme/vkeyboard_disabled_key_normal.png -> build/lib.linux-x86_64-cpython-314/kivy/tools/theming/defaulttheme
-[DEBUG]:   	[INFO   ] copying kivy/tools/theming/defaulttheme/checkbox_radio_disabled_on.png -> build/lib.linux-x86_64-cpython-314/kivy/tools/theming/defaulttheme
-[DEBUG]:   	[INFO   ] copying kivy/tools/theming/defaulttheme/vkeyboard_disabled_key_down.png -> build/lib.linux-x86_64-cpython-314/kivy/tools/theming/defaulttheme
-[DEBUG]:   	[INFO   ] copying kivy/tools/theming/defaulttheme/audio-volume-medium.png -> build/lib.linux-x86_64-cpython-314/kivy/tools/theming/defaulttheme
-[DEBUG]:   	[INFO   ] copying kivy/tools/theming/defaulttheme/progressbar.png -> build/lib.linux-x86_64-cpython-314/kivy/tools/theming/defaulttheme
-[DEBUG]:   	[INFO   ] copying kivy/tools/theming/defaulttheme/slider_cursor_disabled.png -> build/lib.linux-x86_64-cpython-314/kivy/tools/theming/defaulttheme
-[DEBUG]:   	[INFO   ] copying kivy/tools/theming/defaulttheme/vkeyboard_background.png -> build/lib.linux-x86_64-cpython-314/kivy/tools/theming/defaulttheme
-[DEBUG]:   	[INFO   ] copying kivy/tools/theming/defaulttheme/vkeyboard_key_normal.png -> build/lib.linux-x86_64-cpython-314/kivy/tools/theming/defaulttheme
-[DEBUG]:   	[INFO   ] copying kivy/tools/theming/defaulttheme/button_disabled.png -> build/lib.linux-x86_64-cpython-314/kivy/tools/theming/defaulttheme
-[DEBUG]:   	[INFO   ] copying kivy/tools/theming/defaulttheme/media-playback-start.png -> build/lib.linux-x86_64-cpython-314/kivy/tools/theming/defaulttheme
-[DEBUG]:   	[INFO   ] copying kivy/tools/theming/defaulttheme/action_item_down.png -> build/lib.linux-x86_64-cpython-314/kivy/tools/theming/defaulttheme
-[DEBUG]:   	[INFO   ] copying kivy/tools/theming/defaulttheme/textinput_disabled.png -> build/lib.linux-x86_64-cpython-314/kivy/tools/theming/defaulttheme
-[DEBUG]:   	[INFO   ] copying kivy/tools/theming/defaulttheme/selector_right.png -> build/lib.linux-x86_64-cpython-314/kivy/tools/theming/defaulttheme
-[DEBUG]:   	[INFO   ] copying kivy/tools/theming/defaulttheme/button_disabled_pressed.png -> build/lib.linux-x86_64-cpython-314/kivy/tools/theming/defaulttheme
-[DEBUG]:   	[INFO   ] copying kivy/tools/theming/defaulttheme/splitter_disabled_down_h.png -> build/lib.linux-x86_64-cpython-314/kivy/tools/theming/defaulttheme
-[DEBUG]:   	[INFO   ] copying kivy/tools/theming/defaulttheme/splitter.png -> build/lib.linux-x86_64-cpython-314/kivy/tools/theming/defaulttheme
-[DEBUG]:   	[INFO   ] copying kivy/tools/theming/defaulttheme/action_group.png -> build/lib.linux-x86_64-cpython-314/kivy/tools/theming/defaulttheme
-[DEBUG]:   	[INFO   ] copying kivy/tools/theming/defaulttheme/tab_btn.png -> build/lib.linux-x86_64-cpython-314/kivy/tools/theming/defaulttheme
-[DEBUG]:   	[INFO   ] copying kivy/tools/theming/defaulttheme/checkbox_r
-This step has been truncated due to its large size. View the raw logs from the  menu once the workflow run has completed.
-0s
-0s
-0s
-1s
-0s
+name: Build Age Calculator APK
+on: [push, workflow_dispatch]
+
+jobs:
+  build:
+    runs-on: ubuntu-22.04
+    steps:
+      - uses: actions/checkout@v4
+
+      - name: Build with Buildozer
+        uses: ArtemSBulgakov/buildozer-action@v1
+        id: buildozer
+        with:
+          workdir: .
+          buildozer_version: stable
+
+      - name: Upload APK
+        uses: actions/upload-artifact@v4
+        with:
+          name: age-calculator-apk
+          path: ${{ steps.buildozer.outputs.filename }}
