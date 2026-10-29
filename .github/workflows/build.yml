@@ -1,7 +1,8 @@
 name: Build Age Calculator APK
 on: [push, workflow_dispatch]
-name: Build Age Calculator APK
-on: [push, workflow_dispatch]
+- name: Clean Buildozer cache
+  run: |
+    rm -rf .buildozer bin
 
 jobs:
   build:
