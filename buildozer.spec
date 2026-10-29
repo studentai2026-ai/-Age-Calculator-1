@@ -6,7 +6,7 @@ source.dir = .
 source.include_exts = py,png,jpg,kv,atlas
 version = 1.0.0
 
-requirements = python3,kivy
+requirements = python3==3.11.10,kivy
 
 android.permissions = 
 orientation = portrait
